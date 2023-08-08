@@ -1,0 +1,9 @@
+<%= @book.title %>
+<%= @book.content %>
+<%= params %>
+
+<%= form_with( model:@comment, url: book_comments_path, data: { turbo: false } ) do |f| %>
+        <%= f.label :content, "留言" %>
+        <%= f.text_field :content %>
+        <%= f.submit "發送" %>
+<% end %>
